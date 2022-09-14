@@ -54,9 +54,8 @@ export const countRolxusus = async (req, res) => {
 export const createRolxusu = async (req, res) => {
     try {
         const connection = await connect()
-        const [rows] = await connection.query("INSERT INTO Rolxusu(RXU_NUMCTRL,USU_NUMCTRL,ROL_NUMCTRL) VALUES (?, ?, ?)",
+        const [rows] = await connection.query("INSERT INTO Rolxusu(USU_NUMCTRL,ROL_NUMCTRL) VALUES (?, ?)",
             [
-                req.body.RXU_NUMCTRL,
                 req.body.USU_NUMCTRL,
                 req.body.ROL_NUMCTRL
             ])

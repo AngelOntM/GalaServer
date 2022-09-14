@@ -1,0 +1,150 @@
+[
+    {
+        "clave": "ban000",
+        "nombre": "Bancos",
+        "tipo": "Menu",
+        "icono": "ban-icono",
+        "visible": false,
+        "nivel": 1,
+        "descripcion": "Menu que contendra el apartado de bancos",
+        "subnivel": [
+            {
+                "clave": "ban000101r",
+                "nombre": "Saldos de Cuentas Bancarias",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Saldos de Cuentas Bancarias",
+                "ruta": "bancos/reportes/saldos_cuentas_bancarias"
+            },
+            {
+                "clave": "ban000301r",
+                "nombre": "Estados Cuenta",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Estado de Cuenta",
+                "ruta": "bancos/reportes/estados_cuenta"
+            },
+            {
+                "clave": "ban000201r",
+                "nombre": "Diario de Bancos",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Diario de Bancos",
+                "ruta": "bancos/reportes/diario_bancos"
+            },
+            {
+                "clave": "ban000401r",
+                "nombre": "Auxiliar de Bancos",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Auxiliar de Bancos",
+                "ruta": "bancos/reportes/auxiliar_bancos"
+            },
+            {
+                "clave": "ban000101r",
+                "nombre": " Consolidado Mensual de Bancos",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Consolidado Mensual de Bancos",
+                "ruta": "bancos/reportes/consolidado_mensual_bancos"
+            },
+            {
+                "clave": "ban001101r",
+                "nombre": "Movimientos sin Conciliar",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Movimientos sin Conciliar",
+                "ruta": "bancos/reportes/movimientos_sin_conciliar"
+            }
+        ]
+    },
+    {
+        "clave": "veh000",
+        "nombre": "Bienes",
+        "tipo": "Menu",
+        "icono": "bienes-icono",
+        "visible": true,
+        "nivel": 1,
+        "descripcion": "Menu que contendra el apartado de Bienes",
+        "subnivel": [
+            {
+                "clave": "veh020101m",
+                "nombre": "Bienes",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Bienes",
+                "ruta": "bienes/movimientos/bienes"
+            },
+            {
+                "clave": "veh100101m",
+                "nombre": "Características Adicionales",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Características Adicionales",
+                "ruta": "bienes/movimientos/caracteristicas_adicionales"
+            },
+            {
+                "clave": "veh130101m",
+                "nombre": "Expediente",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Expediente",
+                "ruta": "bienes/movimientos/exoediente"
+            },
+            {
+                "clave": "veh030101m",
+                "nombre": "Personas",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Personas",
+                "ruta": "bienes/movimientos/personas"
+            },
+            {
+                "clave": "veh050101m",
+                "nombre": "Mantenimiento",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Mantenimiento",
+                "ruta": "bienes/movimientos/mantenimiento"
+            },
+            {
+                "clave": "veh110101m",
+                "nombre": "Combustible",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Combustible",
+                "ruta": "bienes/movimientos/combustible"
+            },
+            {
+                "clave": "veh120101m",
+                "nombre": "Planeación",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Planeación",
+                "ruta": "bienes/movimientos/planeacion"
+            },
+            {
+                "clave": "veh021101a",
+                "nombre": "Importación",
+                "tipo": "Programa",
+                "visible": true,
+                "nivel": 2,
+                "descripcion": "Programa que contendra el apartado de Importación",
+                "ruta": "bienes/movimientos/importacion"
+            }
+        ]
+    }
+]

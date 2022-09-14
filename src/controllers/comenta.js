@@ -78,9 +78,8 @@ export const countComentas = async (req, res) => {
 export const createComenta = async (req, res) => {
     try {
         const connection = await connect()
-        const [rows] = await connection.query("INSERT INTO Comenta(COM_NUMCTRL,COM_COMENTA,COM_FECHA,MOV_NUMCTRL,USU_NUMCTRL,EST_NUMCTRL) VALUES (?, ?, ?, ?, ?, ?)",
+        const [rows] = await connection.query("INSERT INTO Comenta(COM_COMENTA,COM_FECHA,MOV_NUMCTRL,USU_NUMCTRL,EST_NUMCTRL) VALUES (?, ?, ?, ?, ?)",
             [
-                req.body.COM_NUMCTRL,
                 req.body.COM_COMENTA,
                 req.body.COM_FECHA,
                 req.body.MOV_NUMCTRL,

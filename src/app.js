@@ -12,7 +12,6 @@ import morgan from "morgan";
  */
 import menu from "./routes/menu.js"
 import modulo from "./routes/modulo.js"
-import programa from "./routes/programa.js"
 import region from "./routes/region.js"
 import motivo from "./routes/motivo.js"
 import estatus from "./routes/estatus.js"
@@ -41,7 +40,6 @@ app.use(express.json());
  */
 app.use(menu)
 app.use(modulo)
-app.use(programa)
 app.use(region)
 app.use(motivo)
 app.use(estatus)

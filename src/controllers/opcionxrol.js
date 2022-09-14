@@ -58,9 +58,8 @@ export const countOpcionxrols = async (req, res) => {
 export const createOpcionxrol = async (req, res) => {
     try {
         const connection = await connect()
-        const [rows] = await connection.query("INSERT INTO Opcionxrol(OXR_NUMTRL,OXR_MENU,ROL_NUMCTRL) VALUES (?, ?, ?)",
+        const [rows] = await connection.query("INSERT INTO Opcionxrol(OXR_MENU,ROL_NUMCTRL) VALUES (?, ?)",
             [
-                req.body.OXR_NUMTRL,
                 req.body.OXR_MENU,
                 req.body.ROL_NUMCTRL
             ])

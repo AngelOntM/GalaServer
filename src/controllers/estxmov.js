@@ -54,9 +54,8 @@ export const countEstxmovs = async (req, res) => {
 export const createEstxmov = async (req, res) => {
     try {
         const connection = await connect()
-        const [rows] = await connection.query("INSERT INTO Estxmov(EXM_NUMCTRL,EXM_COMENTA,EST_NUMCTRL,MOV_NUMCTRL) VALUES (?, ?, ?, ?)",
+        const [rows] = await connection.query("INSERT INTO Estxmov(EXM_COMENTA,EST_NUMCTRL,MOV_NUMCTRL) VALUES (?, ?, ?)",
             [
-                req.body.EXM_NUMCTRL,
                 req.body.EXM_COMENTA,
                 req.body.EST_NUMCTRL,
                 req.body.MOV_NUMCTRL,
