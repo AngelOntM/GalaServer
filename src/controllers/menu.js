@@ -9,3 +9,16 @@ export const getMenus = async (req, res) => {
         res.sendStatus(400)
     }
 }
+
+export const getSubLvl = async (req, res) => {
+    try {
+        menu.forEach(element => {
+            if (element.clave == req.body.clave) {
+                res.json(element.subnivel)
+            }
+        });
+    } catch (error) {
+        console.error(error)
+        res.sendStatus(400)
+    }
+}

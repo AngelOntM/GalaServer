@@ -5,6 +5,7 @@
         "tipo": "Menu",
         "icono": "ban-icono",
         "visible": false,
+        "index": 0,
         "nivel": 1,
         "descripcion": "Menu que contendra el apartado de bancos",
         "subnivel": [
@@ -45,7 +46,7 @@
                 "ruta": "bancos/reportes/auxiliar_bancos"
             },
             {
-                "clave": "ban000101r",
+                "clave": "ban000501r",
                 "nombre": " Consolidado Mensual de Bancos",
                 "tipo": "Programa",
                 "visible": true,
@@ -70,6 +71,7 @@
         "tipo": "Menu",
         "icono": "bienes-icono",
         "visible": true,
+        "index": 1,
         "nivel": 1,
         "descripcion": "Menu que contendra el apartado de Bienes",
         "subnivel": [

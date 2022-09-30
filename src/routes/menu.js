@@ -1,8 +1,10 @@
 import { Router } from 'express';
-import { getMenus } from '../controllers/menu.js'
+import { getMenus, getSubLvl } from '../controllers/menu.js'
 
 const router = Router()
 
 router.post('/menu', getMenus)
+
+router.post('/getsub', getSubLvl)
 
 export default router

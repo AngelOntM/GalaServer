@@ -1,9 +1,11 @@
 import { connect } from '../database/database.js'
+import { filtrarMenu } from '../libs/filtrar.js'
+
 
 export const getOpcionxrols = async (req, res) => {
     try {
         var val = ' WHERE'
-        var sql = 'SELECT opcionxrol.OXR_NUMTRL,opcionxrol.OXR_MENU, rol.ROL_NUMCTRL,rol.ROL_NOMBRE FROM opcionxrol inner join rol on rol.ROL_NUMCTRL = opcionxrol.ROL_NUMCTRL'
+        var sql = 'SELECT opcionxrol.OXR_NUMTRL, rol.ROL_NUMCTRL,rol.ROL_NOMBRE, opcionxrol.OXR_MENU FROM opcionxrol inner join rol on rol.ROL_NUMCTRL = opcionxrol.ROL_NUMCTRL'
         if (req.body.OXR_NUMTRL) {
             sql += val + ' Opcionxrol.OXR_NUMTRL LIKE "%' + req.body.OXR_NUMTRL + '%"'
             val = ' AND'
@@ -28,6 +30,7 @@ export const getOpcionxrols = async (req, res) => {
         }
         const connection = await connect()
         const [rows] = await connection.query(sql)
+        rows[0].OXR_MENU = JSON.parse(rows[0].OXR_MENU)
         res.json(rows)
     } catch (error) {
         console.error(error)
@@ -58,6 +61,9 @@ export const countOpcionxrols = async (req, res) => {
 export const createOpcionxrol = async (req, res) => {
     try {
         const connection = await connect()
+        req.body.OXR_MENU = filtrarMenu(req.body.OXR_MENU)
+        req.body.OXR_MENU = JSON.stringify(req.body.OXR_MENU)
+
         const [rows] = await connection.query("INSERT INTO Opcionxrol(OXR_MENU,ROL_NUMCTRL) VALUES (?, ?)",
             [
                 req.body.OXR_MENU,
@@ -68,6 +74,7 @@ export const createOpcionxrol = async (req, res) => {
             ...req.body
         })
     } catch (error) {
+        console.log(error)
         res.sendStatus(400)
     }
 }
